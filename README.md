@@ -3,14 +3,14 @@ These configurations make use of the colorscheme [gruvbox-dark](https://github.c
 
 - Settings for:
 	- vim (text editor)
+	- alacritty (terminal)
 	- zsh (shell)
-  - git
-  - htop (system-monitor)
-  - newsboat (rss-feed-reader)
-  - zathura (pdf-viewer)
-  - polybar (statusbar)
-  - alacritty (terminal)
-  - xdg base directory
+	- htop (system-monitor)
+	- newsboat (rss-feed-reader)
+	- zathura (pdf-viewer)
+	- polybar (statusbar)
+	- git
+	- xdg base directory
 - Minimization of the home directory:
   - Making use of the xdg base directory
   - Some environmental variables have been set in `~/.zprofile` to move configs into `~/.config/`
