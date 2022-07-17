@@ -1,0 +1,7 @@
+[user]
+	email = clusterfonk@pm.me
+	name = clusterfonk
+[diff]
+    tool = vimdiff
+[branch]
+    sort = -authordate

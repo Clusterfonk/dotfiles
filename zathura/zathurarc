@@ -1,0 +1,42 @@
+# GENERAL 
+set statusbar-h-padding 10
+set statusbar-v-padding 0
+set page-padding 1
+
+
+# KEYBINDING 
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+
+
+# THEME
+set font "FiraMono bold 9"
+
+set guioptions "s"
+
+set default-bg "#282828"
+set default-fg "#fbf1c7"
+
+set statusbar-bg "#3c3836"
+set statusbar-fg "#bdae93"
+
+set inputbar-bg "#282828"
+set inputbar-fg "#fbf1c7"
+
+set notification-bg "#282828"
+set notification-fg "#b8bb26"
+set notification-error-bg "#282828"
+set notification-error-fg "#fb4934"
+set notification-warning-bg "#282828"
+set notification-warning-fg "#fb4934"
+
+set highlight-color "#fe8019"
+set highlight-active-color "#d3869b"
+
+set recolor-darkcolor "#fbf1c7" 
+set recolor-lightcolor "#282828" 
+
+set render-loading-bg "#282828"
+set render-loading-fg "#fbf1c7"
