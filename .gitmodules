@@ -7,3 +7,6 @@
 [submodule "vim/vim_runtime/plugins/lightline.vim"]
 	path = vim/vim_runtime/plugins/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/vim_runtime/plugins/yuck.vim"]
+	path = vim/vim_runtime/plugins/yuck.vim
+	url = https://github.com/elkowar/yuck.vim
