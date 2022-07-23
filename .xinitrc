@@ -4,4 +4,4 @@
 ~/.config/feh/.fehbg &
 
 # Start WM
-exec dwm
+while type awesome >/dev/null; do awesome && continue || break; done
