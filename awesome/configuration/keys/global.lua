@@ -1,13 +1,23 @@
+---------------------------------------------------------------
+--  Sections:
+--      -> Launch
+--      -> Standard
+--      -> Layout Navigation
+--      -> Layout Manipulation
+--      -> Workspace Navigation
+---------------------------------------------------------------
+
 local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar = require("menubar")
-
 local cmd = require("configuration.defaults.commands")
---
--- => Opening Applications
---
+
+
 awful.keyboard.append_global_keybindings({
-    --- Launcher
+---------------------------------------------------------------
+-- => Launch
+---------------------------------------------------------------
+    --- Launcher <- TODO: no clue why but first entry never works
 	awful.key({ MODKEY          }, "o", function() awful.spawn(cmd.launcher) end,
 	          { description = "open launcher", group = "cmd" }),
 
@@ -25,23 +35,24 @@ awful.keyboard.append_global_keybindings({
 
     -- Menubar <- TODO: replace with launcher
     awful.key({ MODKEY          }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "cmd"})
+              {description = "show the menubar", group = "cmd"}),
 
-})
-
--- Standard
-awful.keyboard.append_global_keybindings({
-    awful.key({ MODKEY, CTRL }, "r", awesome.restart,
-              {description = "reload awesome", group = "awesome"}),
-    awful.key({ MODKEY, SHIFT   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
+---------------------------------------------------------------
+-- => Standard 
+---------------------------------------------------------------
     -- help
     awful.key({ MODKEY, CTRL, SHIFT }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
-})
+              {description="show help", group="standard"}),
+    --- restart
+    awful.key({ MODKEY, CTRL }, "r", awesome.restart,
+              {description = "reload awesome", group = "standard"}),
+    -- quit
+    awful.key({ MODKEY, SHIFT   }, "q", awesome.quit,
+              {description = "quit awesome", group = "standard"}),
 
+---------------------------------------------------------------
 -- Layout Navigation
-awful.keyboard.append_global_keybindings({
+---------------------------------------------------------------
     awful.key({ MODKEY,           }, "Tab", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
@@ -64,10 +75,10 @@ awful.keyboard.append_global_keybindings({
               {description = "focus the next screen", group = "screen"}),
     awful.key({ MODKEY,           }, ",", function () awful.screen.focus_relative(-1) end,
               {description = "focus the previous screen", group = "screen"}),
-})
 
+---------------------------------------------------------------
 -- Layout manipulation
-awful.keyboard.append_global_keybindings({
+---------------------------------------------------------------
     awful.key({ MODKEY,           }, "l", function () awful.tag.incmwfact( 0.05) end,
               {description = "increase master width factor", group = "layout"}),
 
@@ -93,10 +104,10 @@ awful.keyboard.append_global_keybindings({
                   end
               end,
               {description = "restore all minimized", group = "client"}),
-})
 
+---------------------------------------------------------------
 -- workspaces
-awful.keyboard.append_global_keybindings({
+---------------------------------------------------------------
     -- view workspace
     awful.key({
 		modifiers = { MODKEY },

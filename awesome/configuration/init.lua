@@ -1,14 +1,11 @@
---require("autostart")
+require(... .. ".keys.defaults")
 
+require(... .. ".keys.global")
+require(... .. ".mouse")
 
----
--- => Bindings
----
-require(... .. ".defaults.keybinds")
-require(... .. ".bindings.global_keys")
-require(... .. ".bindings.client_keys")
-require(... .. ".bindings.mouse")
+require(... .. ".clients")
 
 require(... .. ".layout")
---require(... .. "layout")
---require(... .. "tags")
+
+require(... .. ".tags")
+

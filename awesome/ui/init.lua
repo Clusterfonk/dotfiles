@@ -1,0 +1,10 @@
+require(... .. ".top_bar")
+
+--local awful = require("awful")
+--awful.screen.connect_for_each_screen(function(s)
+--    titlescreen(s)
+--	--bottom_panel(s)
+--	--central_panel(s)
+--	--info_panel(s)
+--	--notification_panel(s)
+--end)
