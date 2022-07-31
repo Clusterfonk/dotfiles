@@ -1,3 +1,5 @@
+-- @license APGL-3.0 <https://www.gnu.org/licenses/>
+-- @author Clusterfonk <https://github.com/Clusterfonk>
 ---------------------------------------------------------------
 --  Sections:
 --      -> Launch
@@ -6,10 +8,11 @@
 --      -> Layout Manipulation
 --      -> Workspace Navigation
 ---------------------------------------------------------------
-
 local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar = require("menubar")
+local gtable = require("gears.table")
+
 local cmd = require("configuration.defaults.commands")
 
 
@@ -53,7 +56,9 @@ awful.keyboard.append_global_keybindings({
 ---------------------------------------------------------------
 -- Layout Navigation
 ---------------------------------------------------------------
-    awful.key({ MODKEY,           }, "Tab", awful.tag.history.restore,
+    awful.key({ MODKEY,           }, "Tab", function () 
+        awful.tag.history.restore()
+    end,
               {description = "go back", group = "tag"}),
 
     awful.key({ MODKEY,           }, "j", function () awful.client.focus.byidx( 1) end,
@@ -108,20 +113,20 @@ awful.keyboard.append_global_keybindings({
 ---------------------------------------------------------------
 -- workspaces
 ---------------------------------------------------------------
-    -- view workspace
-    awful.key({
-		modifiers = { MODKEY },
-		keygroup = "numrow",
-		description = "only view tag",
-		group = "tags",
-		on_press = function(index)
-			local screen = awful.screen.focused()
-			local tag = screen.tags[index]
-			if tag then
-				tag:view_only()
-			end
-		end,
-	}),
+    awful.key {
+        modifiers   = { MODKEY },
+        keygroup    = "numrow",
+        description = "only view tag",
+        group       = "tags",
+        on_press    = function (index)
+            local screen = awful.screen.focused()
+            local tag = screen.tags[index]
+            if tag then
+                tag:view_only()
+            end
+        end,
+    },
+
     -- move client to tag
     awful.key({
 		modifiers = { MODKEY, SHIFT },
@@ -134,20 +139,6 @@ awful.keyboard.append_global_keybindings({
 				if tag then
 					client.focus:move_to_tag(tag)
 				end
-			end
-		end,
-	}),
-    -- TODO: keybind to 0 and get all available tags
-    -- Toggle all tags
-    awful.key({
-		modifiers = { MODKEY, }, "0",
-		description = "toggle tag",
-		group = "tags",
-		on_press = function(index)
-			local screen = awful.screen.focused()
-			local tag = screen.tags[index]
-			if tag then
-				awful.tag.viewtoggle(tag)
 			end
 		end,
 	}),

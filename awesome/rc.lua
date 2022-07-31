@@ -1,6 +1,9 @@
+--      @license APGL-3.0 <https://www.gnu.org/licenses/>
+--      @author clusterfonk
 ---------------------------------------------------------------
 --  Sections:
 --      -> Theme 
+--      -> Autostart
 --      -> Configuration 
 --      -> Modules
 --      -> UI 
@@ -13,11 +16,17 @@ local awful = require("awful")
 local gears = require("gears")
 local beautiful = require("beautiful")
 
+
+---------------------------------------------------------------
+-- => Autostart
+---------------------------------------------------------------
+require("autostart")
+
 ---------------------------------------------------------------
 -- => Theme
 ---------------------------------------------------------------
-local theme_dir = gears.filesystem.get_themes_dir() .. "default/"
-beautiful.init(theme_dir .. "theme.lua")
+ local theme_dir = gears.filesystem.get_configuration_dir() .. "theme/gruvbox/"
+ beautiful.init(theme_dir .. "theme.lua")
 
 ---------------------------------------------------------------
 -- => Configuration
@@ -27,7 +36,6 @@ require("configuration")
 ---------------------------------------------------------------
 -- => Modules
 ---------------------------------------------------------------
---require("modules.auto-start") TODO
 require("modules.sloppy-focus")
 require("modules.set_wallpaper")
 
@@ -41,14 +49,12 @@ require("ui")
 ---------------------------------------------------------------
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
-gears.timer({
-    timeout = 5,
-    autostart = true,
-    call_now = true,
-    callback = function()
-            collectgarbage("collect")
-    end,
-})
+gears.timer {
+       timeout = 10,
+       autostart = true,
+       call_now = true,
+       callback = function() collectgarbage() end
+}
 
 ---------------------------------------------------------------
 -- => Error Handling

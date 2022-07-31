@@ -1,11 +1,6 @@
+-- @license APGL-3.0 <https://www.gnu.org/licenses/>
+-- @author Clusterfonk <https://github.com/Clusterfonk>
 local awful = require("awful")
-
-
--------------------------------
--- => Mouse
--------------------------------
---awful.mouse.append_global_mousebindings({
---})
 
 
 client.connect_signal("request::default_mousebindings", function()
@@ -24,4 +19,3 @@ client.connect_signal("request::default_mousebindings", function()
         end),
     })
 end)
-

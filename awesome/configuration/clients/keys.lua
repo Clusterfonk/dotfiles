@@ -1,3 +1,5 @@
+-- @license APGL-3.0 <https://www.gnu.org/licenses/>
+-- @author Clusterfonk <https://github.com/Clusterfonk>
 local awful = require("awful")
 
 
@@ -12,8 +14,10 @@ client.connect_signal("request::default_keybindings", function()
         --- Toggle floating
         awful.key({ MODKEY, SHIFT }, "space", awful.client.floating.toggle,
                   {description = "toggle floating", group = "client"}), 
-
-        awful.key({ MODKEY, SHIFT   }, "c",      function (c) c:kill() end,
+        awful.key({ MODKEY, SHIFT   }, "c",      
+        function (c) 
+            c:kill() -- TODO: don't kill clients that can be minimized to tray
+        end,
                   {description = "close", group = "client"}),
 
         awful.key({ MODKEY, CTRL }, "Return", 
@@ -21,7 +25,6 @@ client.connect_signal("request::default_keybindings", function()
                   {description = "move to master", group = "client"}),
 
     -- layout manip
--- TODO: move to next and prev screen instead
     awful.key({ MODKEY, SHIFT }, ".",      function (c) c:move_to_screen() end,
               {description = "move to next screen", group = "client"}),
     awful.key({ MODKEY, SHIFT }, ",",      function (c) c:move_to_screen() end,

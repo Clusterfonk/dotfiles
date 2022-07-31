@@ -5,7 +5,7 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # Colors
 export TERM=xterm-256color
 autoload -Uz colors && colors
-source $HOME/.config/zsh/theme.zsh
+source $XDG_CONFIG_HOME/zsh/theme.zsh
 
 ## Plugin Settings
 # zsh-vi-mode
@@ -26,7 +26,7 @@ unsetopt beep
 
 
 ## History
-HISTFILE=~/.cache/zsh/history
+HISTFILE=$XDG_CACHE_HOME/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -40,11 +40,7 @@ _comp_options+=(globdots)
 
 
 ## Aliases
-alias ls='ls --color=auto'
-alias la='ls -A --color=auto'
-alias ll='ls -Al --color=auto'
-alias svim='sudoedit $1'
-
+source $XDG_CACHE_HOME/zsh/alias
 
 ## Keybinds
 # vi mode
