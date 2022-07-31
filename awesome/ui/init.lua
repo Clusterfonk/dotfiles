@@ -19,11 +19,11 @@ awful.screen.connect_for_each_screen(function(s)
     
 	taglist_bar(s, taglist_bar_width, bar_height, bar_offset)
 	
-	local right_bar_width = dpi(250, s)
-	right_bar(s, right_bar_width, bar_height, bar_offset)
 	-- calendar(s)
 	if screen.count() >= RIGHT_BAR_SCREEN then
 		if s == screen[RIGHT_BAR_SCREEN] then
+			local right_bar_width = dpi(250, s)
+			right_bar(s, right_bar_width, bar_height, bar_offset)
 		end
 	end
 
