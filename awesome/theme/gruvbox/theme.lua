@@ -135,7 +135,7 @@ theme.layout_tile = gears.color.recolor_image(layout_dir .. "tile.png", theme.fg
 -- widget icons
 local icon_dir = theme_dir .. "icons/"
 local function loading_icon(filename) 
-    local lgi_cairo_surface = gears.surface.load_uncached(icon_dir .. filename .. ".svg")
+    local lgi_cairo_surface = gears.surface.load_silently(icon_dir .. filename .. ".svg")
     return gears.color.recolor_image(lgi_cairo_surface, theme.fg_normal)
 end
 
