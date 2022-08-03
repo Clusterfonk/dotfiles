@@ -25,7 +25,6 @@ return function(s, bar_width, bar_height, bar_offset)
 
     local systray = wibox.widget({
         {
-            
             {
                 id = "icon",
                 image = bt.icon.menu_down,

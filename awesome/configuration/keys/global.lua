@@ -14,6 +14,7 @@ local menubar = require("menubar")
 local gtable = require("gears.table")
 
 local cmd = require("configuration.defaults.commands")
+local panels = require("ui.panels")
 
 
 awful.keyboard.append_global_keybindings({
@@ -21,25 +22,29 @@ awful.keyboard.append_global_keybindings({
 -- => Launch
 ---------------------------------------------------------------
     --- Launcher <- TODO: no clue why but first entry never works
-	awful.key({ MODKEY          }, "o", function() awful.spawn(cmd.launcher) end,
+	awful.key({ MODKEY }, "o", function() awful.spawn(cmd.launcher) end,
 	          { description = "open launcher", group = "cmd" }),
 
     --- Terminal
-	awful.key({ MODKEY, SHIFT   }, "Return", function() awful.spawn(cmd.terminal) end,
+	awful.key({ MODKEY, SHIFT }, "Return", function() awful.spawn(cmd.terminal) end,
 	          { description = "open terminal", group = "cmd" }),
 
     --- Editor 
-	awful.key({ MODKEY, SHIFT   }, "e", function() awful.spawn(cmd.text_editor) end,
+	awful.key({ MODKEY, SHIFT }, "e", function() awful.spawn(cmd.text_editor) end,
 	          { description = "open editor", group = "cmd" }),
 
     --- Web browser
-	awful.key({ MODKEY, SHIFT   }, "w", function() awful.spawn(cmd.web_browser) end,
+	awful.key({ MODKEY, SHIFT }, "w", function() awful.spawn(cmd.web_browser) end,
 	          { description = "open web browser", group = "cmd" }),
 
     -- Menubar <- TODO: replace with launcher
-    awful.key({ MODKEY          }, "p", function() menubar.show() end,
+    awful.key({ MODKEY }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "cmd"}),
 
+    -- logout panel
+    awful.key({ MODKEY }, "Escape", function() 
+        panels.logpop:emit_signal("toggle") end,
+              {description = "toggle logout panel", group = "cmd"}),
 ---------------------------------------------------------------
 -- => Standard 
 ---------------------------------------------------------------

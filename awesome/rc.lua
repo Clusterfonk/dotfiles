@@ -49,12 +49,14 @@ require("ui")
 ---------------------------------------------------------------
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
-gears.timer {
-       timeout = 10,
-       autostart = true,
-       call_now = true,
-       callback = function() collectgarbage() end
-}
+gears.timer({
+    timeout = 1,
+    autostart = true,
+    call_now = true,
+    callback = function()
+            collectgarbage("collect")
+    end,
+})
 
 ---------------------------------------------------------------
 -- => Error Handling
@@ -62,7 +64,7 @@ gears.timer {
 local naughty = require("naughty")
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
+                     title = "Errors during startup!",
                      text = awesome.startup_errors })
 end
 
@@ -75,9 +77,8 @@ do
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
+                         title = "Error!",
                          text = tostring(err) })
         in_error = false
     end)
 end
-

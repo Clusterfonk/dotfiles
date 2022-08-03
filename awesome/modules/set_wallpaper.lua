@@ -1,17 +1,13 @@
+-- @license APGL-3.0 <https://www.gnu.org/licenses/>
+-- @author Clusterfonk <https://github.com/Clusterfonk>
 local awful = require("awful")
-local beautiful = require("beautiful")
+local bt = require("beautiful")
 local gears = require("gears")
 
 
----
--- => Wallpapers
---- 
-
 local function set_wallpaper(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
+    if bt.wallpaper then
+        local wallpaper = bt.wallpaper
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
@@ -20,7 +16,6 @@ local function set_wallpaper(s)
 end
 
 awful.screen.connect_for_each_screen(function(s)
-    -- Wallpaper
     set_wallpaper(s)
 end)
 

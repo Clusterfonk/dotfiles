@@ -50,11 +50,10 @@ colors.bw_8             = "#d5c4a1"
 colors.bw_9             = "#ebdbb2"
 colors.bw_10            = "#fbf1c7"
 
-local theme = { }
-local config_root_dir = gfs.get_configuration_dir()
-local theme_dir = config_root_dir .. "theme/gruvbox/"
+local theme = { colors=colors }
+local root_dir = gfs.get_configuration_dir()
+local theme_dir = root_dir .. "theme/gruvbox/"
 theme.wallpaper = theme_dir .. "/wallpaper.png"
--- TODO: maybe blur wallpaper when panel open
 
 -- Font
 function theme:create_font(args)
@@ -127,34 +126,32 @@ theme.snap_shape =  function(cr, w, h)
                     end
 
 -- Icons
--- layout icons
-local layout_dir = theme_dir .. "layouts/"
-theme.layout_floating = gears.color.recolor_image(layout_dir .. "floating.png", theme.fg_normal)
-theme.layout_tile = gears.color.recolor_image(layout_dir .. "tile.png", theme.fg_normal)
-
--- widget icons
-local icon_dir = theme_dir .. "icons/"
-local function loading_icon(filename) 
-    local lgi_cairo_surface = gears.surface.load_silently(icon_dir .. filename .. ".svg")
+local function load_icon(dir, filename) 
+    local lgi_cairo_surface = gears.surface.load_silently(dir .. filename)
     return gears.color.recolor_image(lgi_cairo_surface, theme.fg_normal)
 end
 
+-- layout icons
+local layout_dir = theme_dir .. "layouts/"
+theme.layout_floating = load_icon(layout_dir, "floating.png")
+theme.layout_tile = load_icon(layout_dir, "tile.png")
+
+
+local icon_dir = theme_dir .. "icons/"
 theme.icon = {}
-theme.icon.bell_normal = loading_icon("bell-normal")
-theme.icon.notification = loading_icon("notification")
+theme.icon.bell_normal = load_icon(icon_dir, "bell-normal.svg")
+theme.icon.notification = load_icon(icon_dir, "notification.svg")
 
-theme.icon.menu_up = loading_icon("menu-up")
--- theme.icon.menu_left = gears.color.recolor_image(icon_dir .. "menu-left.svg", theme.fg_normal)
--- theme.icon.menu_right = gears.color.recolor_image(icon_dir .. "menu-right.svg", theme.fg_normal)
-theme.icon.menu_down = loading_icon("menu-down")
+theme.icon.menu_up = load_icon(icon_dir, "menu-up.svg")
+theme.icon.menu_down = load_icon(icon_dir, "menu-down.svg")
 
-theme.icon.headphones = loading_icon("headphones")
-theme.icon.vol_high = loading_icon("volume-high")
-theme.icon.vol_mid = loading_icon("volume-mid")
-theme.icon.vol_low = loading_icon("volume-low")
-theme.icon.vol_muted = loading_icon("volume-muted")
-theme.icon.mic = loading_icon("microphone")
-theme.icon.mic_muted = loading_icon("microphone-muted")
+theme.icon.headphones = load_icon(icon_dir, "headphones.svg")
+theme.icon.vol_high = load_icon(icon_dir, "volume-high.svg")
+theme.icon.vol_mid = load_icon(icon_dir, "volume-mid.svg")
+theme.icon.vol_low = load_icon(icon_dir, "volume-low.svg")
+theme.icon.vol_muted = load_icon(icon_dir, "volume-muted.svg")
+theme.icon.mic = load_icon(icon_dir, "microphone.svg")
+theme.icon.mic_muted = load_icon(icon_dir, "microphone-muted.svg")
 
 -- systray
 theme.systray = {}
