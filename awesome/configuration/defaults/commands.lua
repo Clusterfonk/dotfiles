@@ -6,4 +6,5 @@ return {
     web_browser = "brave",
     notes = "alacritty -e vimwiki",
     launcher = "",
+    snipregion = "snipregion",
 }
