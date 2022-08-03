@@ -10,6 +10,3 @@
 [submodule "vim/vim_runtime/plugins/yuck.vim"]
 	path = vim/vim_runtime/plugins/yuck.vim
 	url = https://github.com/elkowar/yuck.vim
-[submodule "awesome/modules/bling"]
-	path = awesome/modules/bling
-	url = https://github.com/BlingCorp/bling.git
