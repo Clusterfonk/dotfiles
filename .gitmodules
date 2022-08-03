@@ -10,3 +10,6 @@
 [submodule "vim/vim_runtime/plugins/yuck.vim"]
 	path = vim/vim_runtime/plugins/yuck.vim
 	url = https://github.com/elkowar/yuck.vim
+[submodule "awesome"]
+	path = awesome
+	url = git@github.com:Clusterfonk/awesome.git
