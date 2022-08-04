@@ -6,4 +6,4 @@
 [branch]
     sort = -authordate
 [status]
-    submodulesummary = 1
+    submodulesummary = true 
