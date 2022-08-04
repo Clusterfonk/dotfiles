@@ -3,7 +3,6 @@ env:
   TERM: alacritty
 
 live_config_reload: true
-
     
 # Window
 window:
@@ -34,7 +33,7 @@ font:
     family: FiraMono
     style: Bold 
 
-  size: 11
+  size: 10
 
 # Color Theme
 schemes:
