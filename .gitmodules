@@ -13,3 +13,6 @@
 [submodule "vim/vim_runtime/plugins/lightline.vim"]
 	path = vim/vim_runtime/plugins/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/vim_runtime/plugins/vim-easyescape"]
+	path = vim/vim_runtime/plugins/vim-easyescape
+	url = https://github.com/zhou13/vim-easyescape
