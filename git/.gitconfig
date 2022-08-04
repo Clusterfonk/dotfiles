@@ -5,3 +5,5 @@
     tool = vimdiff
 [branch]
     sort = -authordate
+[status]
+    submodulesummary = 1
