@@ -10,3 +10,6 @@
 [submodule "awesome"]
 	path = awesome
 	url = git@github.com:Clusterfonk/awesome.git
+[submodule "vim/vim_runtime/plugins/lightline.vim"]
+	path = vim/vim_runtime/plugins/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
