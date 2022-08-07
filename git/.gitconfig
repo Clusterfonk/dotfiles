@@ -1,0 +1,9 @@
+[user]
+	email = $GITHUB_EMAIL
+	name = $GITHUB_USERNAME
+[diff]
+    tool = vimdiff
+[branch]
+    sort = -authordate
+[status]
+    submodulesummary = true 
