@@ -1,18 +1,6 @@
-[submodule "vim/vim_runtime/plugins/mru"]
-	path = vim/vim_runtime/plugins/mru
-	url = https://github.com/yegappan/mru
-[submodule "vim/vim_runtime/plugins/vimwiki"]
-	path = vim/vim_runtime/plugins/vimwiki
-	url = https://github.com/vimwiki/vimwiki
-[submodule "vim/vim_runtime/plugins/yuck.vim"]
-	path = vim/vim_runtime/plugins/yuck.vim
-	url = https://github.com/elkowar/yuck.vim
 [submodule "awesome"]
 	path = awesome
 	url = git@github.com:Clusterfonk/awesome.git
-[submodule "vim/vim_runtime/plugins/lightline.vim"]
-	path = vim/vim_runtime/plugins/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
-[submodule "vim/vim_runtime/plugins/vim-easyescape"]
-	path = vim/vim_runtime/plugins/vim-easyescape
-	url = https://github.com/zhou13/vim-easyescape
+[submodule "vim"]
+	path = vim 
+	url = git@github.com:Clusterfonk/vim.git
