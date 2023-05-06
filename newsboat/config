@@ -12,26 +12,32 @@
 ###############################################################
 auto-reload yes
 reload-threads 50
+download-retries 4
 
+text-width 100
+goto-next-feed no
+
+confirm-exit no
+cleanup-on-quit no
 
 ###############################################################
 # => Colorscheme
 ###############################################################
-color background          color223   color0
-color listnormal          color223   color0
-color listnormal_unread   color2     color0
-color listfocus           color223   color237
-color listfocus_unread    color223   color237
-color info                color8     color0
+#     element             fg         bg         attri
+color background          default     color0
+color listnormal          default    color0
+color listnormal_unread   color14    color0
+color listfocus           color9   color237   bold
+color listfocus_unread    color9   color237   bold
+color info                color8    color0
 color article             color223   color0
 
-highlight article "^(Feed|Link):.*$" color11 default bold
-highlight article "^(Title|Date|Author):.*$" color11 default bold
-highlight article "https?://[^ ]+" color2 default underline
-highlight article "\\[[0-9]+\\]" color2 default bold
-highlight article "\\[image\\ [0-9]+\\]" color2 default bold
+highlight article "^(Feed|Link):.*$" color208 default
+highlight article "^(Title|Author|Date):.*$" color10 default bold
+highlight article "https?://[^ ]+" color4 default underline
+highlight article "\\[[0-9]+\\]" color9 default bold
+highlight article "\\[image\\ [0-9]+\\]" color4 default bold
 highlight feedlist "^─.*$" color6 color6 bold
-
 
 ###############################################################
 # => Keybinds
@@ -49,14 +55,14 @@ bind-key u pageup
 bind-key l open
 bind-key h quit
 bind-key a toggle-article-read
+bind-key SPACE next-unread
 bind-key n next-unread
 bind-key N prev-unread
 bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
- 
 ###############################################################
 # => Macros
 ###############################################################
-macro , open-in-browser
+macro , set browser "~/.config/newsboat/open.sh" ; open-in-browser ; set browser $BROWSER

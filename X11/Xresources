@@ -34,3 +34,6 @@
 ! LightGrey + White
 *color7:        #a89984
 *color15:       #ebdbb2
+! DarkOrange + Orange1
+*color208:         #d65d0e
+*color214:         #fe8019
