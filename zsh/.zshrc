@@ -16,11 +16,6 @@ ZVM_VI_OPPEND_ESCAPE_BINDKEY=jk
 
 ZVM_CURSOR_STYLE_ENABLED=false
 
-# TODO: install syntax highlighting ?
-# syntax-highlighting
-#typeset -A ZSH_HIGHLIGHT_STYLES
-#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
 # Prevent beeping
 unsetopt beep
 
