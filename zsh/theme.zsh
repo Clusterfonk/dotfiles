@@ -28,6 +28,10 @@ function shift_mode_hist {
 
 RPROMPT=''
 
+function zvm_after_init {
+ zvm_after_select_vi_mode 
+}
+
 # CALLBACK
 function zvm_after_select_vi_mode {
   case $ZVM_MODE in

@@ -9,41 +9,31 @@ source $XDG_CONFIG_HOME/zsh/theme.zsh
 
 ## Plugin Settings
 # zsh-vi-mode
-ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-ZVM_VI_REPLACE_ESCAPE_BINDKEY=jk
-ZVM_VI_VISUAL_ESCAPE_BINDKEY=jk
-ZVM_VI_OPPEND_ESCAPE_BINDKEY=jk
-
-ZVM_CURSOR_STYLE_ENABLED=false
+ZVM_ESCAPE_KEYTIMEOUT=1
+ZVM_CURSOR_STYLE_ENABLED=true
 
 # Prevent beeping
 unsetopt beep
-
 
 ## History
 HISTFILE=$XDG_CACHE_HOME/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
 
-
-## auto/tab complete
+## Auto/Tab Complete
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
-
 ## Aliases
-source $XDG_CACHE_HOME/zsh/alias
+source $XDG_CONFIG_HOME/zsh/alias.zsh
+source $XDG_CACHE_HOME/zsh/alias.zsh
 
 ## Keybinds
 # vi mode
 bindkey -v
-export KEYTIMEOUT=1
 
-# vim in tab menu
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
+# keymap
+source $XDG_CONFIG_HOME/zsh/colemak.zsh

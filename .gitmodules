@@ -3,4 +3,4 @@
 	url = git@github.com:Clusterfonk/awesome.git
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/Clusterfonk/nvim
+	url = git@github.com:Clusterfonk/nvim.git
