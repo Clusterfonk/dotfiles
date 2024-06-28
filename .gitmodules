@@ -1,9 +1,6 @@
 [submodule "awesome"]
 	path = awesome
 	url = git@github.com:Clusterfonk/awesome.git
-[submodule "vim"]
-	path = vim
-	url = https://github.com/Clusterfonk/vim
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/Clusterfonk/nvim
