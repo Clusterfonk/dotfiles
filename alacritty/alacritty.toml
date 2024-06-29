@@ -35,7 +35,7 @@ white = "#a89984"
 yellow = "#d79921"
 
 [colors.primary]
-background = "#282828"
+background = "#32302F"
 bright_foreground = "#fbf1c7"
 dim_foreground = "#a89984"
 foreground = "#ebdbb2"
@@ -55,20 +55,20 @@ TERM = "alacritty"
 size = 10
 
 [font.bold]
-family = "FiraMono Nerd Font Mono"
+family = "FiraMono"
 style = "Bold"
 
 [font.bold_italic]
-family = "FiraMono Nerd Font Mono"
+family = "FiraMono"
 style = "Bold"
 
 [font.italic]
-family = "FiraMono Nerd Font Mono"
+family = "FiraMono"
 style = "Medium"
 
 [font.normal]
-family = "FiraMono Nerd Font Mono"
-style = "Regular"
+family = "FiraMono"
+style = "Medium"
 
 [[keyboard.bindings]]
 action = "Paste"
