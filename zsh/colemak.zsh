@@ -1,10 +1,5 @@
 #!/bin/sh
 
-ZVM_VI_INSERT_ESCAPE_BINDKEY=,.
-ZVM_VI_REPLACE_ESCAPE_BINDKEY=,.
-ZVM_VI_VISUAL_ESCAPE_BINDKEY=,.
-ZVM_VI_OPPEND_ESCAPE_BINDKEY=,.
-
 bindkey -M vicmd 'm' vi-backward-char
 bindkey -M vicmd 'n' down-line-or-history
 bindkey -M vicmd 'e' up-line-or-history

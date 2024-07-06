@@ -1,7 +1,7 @@
 ## Plugins
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $XDG_CONFIG_HOME/zsh/zsh-vi-mode-plugin.zsh
 
-## Theme 
+## Theme
 # Colors
 export TERM=xterm-256color
 autoload -Uz colors && colors
