@@ -42,22 +42,22 @@ highlight feedlist "^─.*$" color6 color6 bold
 ###############################################################
 # => Keybinds
 ###############################################################
-bind-key j down
-bind-key k up
-bind-key j next articlelist
-bind-key k prev articlelist
-bind-key J next-feed articlelist
-bind-key K prev-feed articlelist
+bind-key n down
+bind-key e up
+bind-key n next articlelist
+bind-key e prev articlelist
+bind-key N next-feed articlelist
+bind-key E prev-feed articlelist
 bind-key G end
 bind-key g home
 bind-key d pagedown
 bind-key u pageup
-bind-key l open
-bind-key h quit
+bind-key i open
+bind-key m quit
 bind-key a toggle-article-read
 bind-key SPACE next-unread
-bind-key n next-unread
-bind-key N prev-unread
+bind-key h next-unread
+bind-key H prev-unread
 bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
