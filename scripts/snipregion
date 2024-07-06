@@ -1,0 +1,6 @@
+#!/bin/sh
+
+selection=$(hacksaw -f "-i %i -g %g")
+if [[ -n $selection ]]; then
+    shotgun $selection - | xclip -t 'image/png' -selection clipboard
+fi
