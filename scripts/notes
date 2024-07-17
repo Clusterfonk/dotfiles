@@ -1,2 +1,2 @@
 #!/bin/sh
-$TERMINAL -e $SHELL -c "nvim -c 'VimwikiIndex'"
+$TERMINAL -e $SHELL -c "nvim -c 'VimwikiIndex' -c 'cd %:p:h'"

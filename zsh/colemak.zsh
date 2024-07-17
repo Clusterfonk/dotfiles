@@ -20,3 +20,6 @@ bindkey -M isearch 'I' vi-forward-char
 
 bindkey -M vicmd 'k' vi-forward-word-end
 bindkey -M vicmd 'K' vi-forward-blank-word-end
+
+bindkey -M menuselect 'n' forward-one-line
+bindkey -M menuselect 'e' backward-one-line
