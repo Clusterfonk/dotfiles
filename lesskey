@@ -1,0 +1,8 @@
+#command
+m   left-scroll
+n   forw-scroll
+e   back-scroll
+i   right-scroll
+h   repeat-search
+H   reverse-search
+^h  help
