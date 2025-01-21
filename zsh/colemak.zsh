@@ -18,8 +18,10 @@ bindkey -M isearch 'e' up-line-or-history
 bindkey -M isearch 'i' vi-forward-char
 bindkey -M isearch 'I' vi-forward-char
 
-bindkey -M vicmd 'k' vi-forward-word-end
-bindkey -M vicmd 'K' vi-forward-blank-word-end
+bindkey -M vicmd '^i' vi-forward-word-end
+bindkey -M vicmd 'I' vi-forward-blank-word-end
+bindkey -M vicmd '^m' vi-backward-word-end
+bindkey -M vicmd 'M' vi-backward-blank-word-end
 
 bindkey -M menuselect 'n' forward-one-line
 bindkey -M menuselect 'e' backward-one-line
