@@ -16,3 +16,6 @@ source $XDG_CONFIG_HOME/user-dirs.dirs
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
 
 export LESSHISTFILE="-"
+
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
