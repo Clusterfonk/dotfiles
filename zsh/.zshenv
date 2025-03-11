@@ -6,6 +6,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave-beta"
+export GIT_EDITOR=$EDITOR
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
