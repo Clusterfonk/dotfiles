@@ -16,6 +16,24 @@ source $XDG_CONFIG_HOME/user-dirs.dirs
 
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
 
+# declutter home dir
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+
+export GTK_RC_FILES="$XDG_CONFIG_HOME/gtk-1.0/gtkrc"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+
+export GOPATH="$XDG_DATA_HOME/go"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
+
+export _JAVA_OPTIONS="
+-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java/.userPrefs
+-Djava.util.prefs.systemRoot=$XDG_CONFIG_HOME/java/.systemPrefs
+-Djava.io.tmpdir=$XDG_CACHE_HOME/java"
+
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+
+export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nvidia"
+
 export LESSHISTFILE="-"
 
 export MANPAGER='nvim +Man!'

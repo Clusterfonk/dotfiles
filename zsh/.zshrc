@@ -19,7 +19,6 @@ source $XDG_CONFIG_HOME/zsh/colemak.zsh
 
 ## Aliases
 source $XDG_CONFIG_HOME/zsh/alias.zsh
-source $XDG_CACHE_HOME/zsh/alias.zsh
 
 # Starship
 eval "$(starship init zsh)"
@@ -28,19 +27,17 @@ eval "$(starship init zsh)"
 source <(fzf --zsh)
 
 ## fzf settings
+bindkey '^f' fzf-cd-widget
+
 export FZF_DEFAULT_OPTS="
     --height 60%"
-    bindkey '^F' fzf-cd-widget
+export FZF_FULL="--height 60% --style full --preview-window=hidden"
 export FZF_ALT_C_OPTS="
-    --height 60%
-    --style full
-    --input-label ' Change Directory '
-    --preview-window=hidden"
+    $FZF_FULL
+    --input-label ' Change Directory '"
 export FZF_CTRL_T_OPTS="
-    --height 60%
-    --style full
-    --input-label ' Find Files '
-    --preview-window=hidden"
+    $FZF_FULL
+    --input-label ' Find Files '"
 export FZF_CTRL_R_OPTS="
     --height 60%
     --style full
