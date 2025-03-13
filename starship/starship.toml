@@ -1,0 +1,14 @@
+add_newline = false
+
+format = """$path$directory$character"""
+right_format = """$all"""
+
+[directory]
+truncation_length = 8
+read_only = ' 🔒'
+repo_root_style	= 'blue'
+truncate_to_repo = false
+use_logical_path = false
+
+[directory.substitutions]
+

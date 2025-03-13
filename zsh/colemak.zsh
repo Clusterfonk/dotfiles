@@ -1,4 +1,5 @@
 #!/bin/sh
+bindkey '^r' .history-incremental-search-backward
 
 bindkey -M vicmd 'm' vi-backward-char
 bindkey -M vicmd 'n' down-line-or-history
@@ -25,3 +26,11 @@ bindkey -M vicmd 'M' vi-backward-blank-word-end
 
 bindkey -M menuselect 'n' forward-one-line
 bindkey -M menuselect 'e' backward-one-line
+
+bindkey -M vicmd "a" vi-insert
+bindkey -M vicmd "A" vi-insert-bol
+bindkey -M vicmd "t" vi-add-next
+bindkey -M vicmd "T" vi-add-eol
+
+bindkey -M vicmd "h" vi-repeat-search
+bindkey -M vicmd "H" vi-rev-repeat-search
