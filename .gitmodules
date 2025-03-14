@@ -12,7 +12,7 @@
 	url = git@github.com:tmux-plugins/tmux-continuum.git
 [submodule "tmux/plugins/tmux-gruvbox-truecolor"]
 	path = tmux/plugins/tmux-gruvbox-truecolor
-	url = git@github.com:LawAbidingCactus/tmux-gruvbox-truecolor.git
+	url = git@github.com:Clusterfonk/tmux-gruvbox-truecolor.git
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = git@github.com:tmux-plugins/tmux-resurrect.git
