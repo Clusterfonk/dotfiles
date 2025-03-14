@@ -1,5 +1,5 @@
 ## Clusterfonk's Dotfiles
-These configurations make use of the colorscheme [gruvbox-dark](https://github.com/morhetz/gruvbox-contrib) 
+These configurations make use of the colorscheme [gruvbox-dark](https://github.com/morhetz/gruvbox-contrib)
 
 - Settings for:
     - awesome wm (window manager)
@@ -7,13 +7,12 @@ These configurations make use of the colorscheme [gruvbox-dark](https://github.c
 	- alacritty (terminal)
 	- zsh (shell)
 	- htop (system-monitor)
-	- newsboat (rss-feed-reader)
 	- zathura (pdf-viewer)
 	- git
 - Minimization of the home directory:
   - Making use of the xdg base directory
-  - Some environmental variables have been set in `~/.zprofile` to move configs into `~/.config/`
-  
+  - Some environmental variables have been set in `~/.zprofile` to move configs into XDG compliant folders
+
 ## Usage
 <placeholder>
 
