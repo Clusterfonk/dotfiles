@@ -17,6 +17,8 @@ source $XDG_CONFIG_HOME/user-dirs.dirs
 export XAUTHORITY="$XDG_CONFIG_HOME/X11/Xauthority"
 
 # declutter home dir
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 export GTK_RC_FILES="$XDG_CONFIG_HOME/gtk-1.0/gtkrc"
