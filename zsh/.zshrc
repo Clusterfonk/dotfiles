@@ -13,7 +13,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
-# keymap
+# Keymap
 bindkey -v
 source $XDG_CONFIG_HOME/zsh/colemak.zsh
 
@@ -23,10 +23,10 @@ source $XDG_CONFIG_HOME/zsh/alias.zsh
 # Starship
 eval "$(starship init zsh)"
 
-# fzf set up key bindings and fuzzy completion
+# Fzf set up key bindings and fuzzy completion
 source <(fzf --zsh)
 
-## fzf settings
+## Fzf settings
 bindkey '^f' fzf-cd-widget
 
 export FZF_DEFAULT_OPTS="
@@ -53,4 +53,3 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 export TERM=xterm-256color
 autoload -Uz colors && colors
 source $XDG_CONFIG_HOME/zsh/theme.zsh
-
