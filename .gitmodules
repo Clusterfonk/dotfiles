@@ -16,6 +16,3 @@
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = git@github.com:tmux-plugins/tmux-resurrect.git
-[submodule "yd60mq"]
-	path = yd60mq
-	url = git@github.com:Clusterfonk/yd60mq.git
