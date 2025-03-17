@@ -1,42 +1,99 @@
-# GENERAL 
+# GENERAL
+autostart recolor
+set adjust-open width
 set statusbar-h-padding 10
 set statusbar-v-padding 0
+set statusbar-home-tilde true
+
 set page-padding 1
 
+set link-zoom false
+set scroll-page-aware true
 
-# KEYBINDING 
+set selection-clipboard clipboard
+
+# KEYBINDING
+unmap <Space>
 map R rotate
-map K zoom in
-map J zoom out
-map i recolor
+map I recolor
 
+# movement
+map m scroll left
+map n scroll down
+map e scroll up
+map i scroll right
+
+# index
+map [index] n navigate_index down
+map [index] e navigate_index up
+map [index] h navigate_index collapse
+map [index] i navigate_index expand
+
+map [index] L navigate_index collapse-all
+map [index] l navigate_index expand-all
+
+map <C-n> scroll half-down
+map <C-e> scroll half-up
+
+map K zoom in
+map k zoom out
+map h search forward
+map H search backward
+#map [normal] <Space>/ nohlsearch TODO: somehow doesnt work
+map [normal] <C-h> nohlsearch
+
+# boomarks
+map [normal] b focus_inputbar ":bmark "
+map [normal] B focus_inputbar ":bjump "
+map [normal] <C-b> focus_inputbar ":blist "
+map [normal] d focus_inputbar ":bdelete "
+
+map <PageUp> navigate previous
+map <PageDown> navigate next
 
 # THEME
-set font "FiraMono bold 9"
+set font "FiraCodeNerdFont 9"
 
 set guioptions "s"
 
-set default-bg "#282828"
-set default-fg "#fbf1c7"
+set notification-error-bg       "rgba(50,48,47,1)"     # bg
+set notification-error-fg       "rgba(251,73,52,1)"    # bright:red
+set notification-warning-bg     "rgba(50,48,47,1)"     # bg
+set notification-warning-fg     "rgba(250,189,47,1)"   # bright:yellow
+set notification-bg             "rgba(50,48,47,1)"     # bg
+set notification-fg             "rgba(184,187,38,1)"   # bright:green
 
-set statusbar-bg "#3c3836"
-set statusbar-fg "#bdae93"
+set completion-bg               "rgba(80,73,69,1)"     # bg2
+set completion-fg               "rgba(235,219,178,1)"  # fg
+set completion-group-bg         "rgba(60,56,54,1)"     # bg1
+set completion-group-fg         "rgba(146,131,116,1)"  # gray
+set completion-highlight-bg     "rgba(131,165,152,1)"  # bright:blue
+set completion-highlight-fg     "rgba(80,73,69,1)"     # bg2
 
-set inputbar-bg "#282828"
-set inputbar-fg "#fbf1c7"
+# Define the color in index mode
+set index-bg                    "rgba(50,48,47,1)"     # bg
+set index-fg                    "rgba(235,219,178,1)"  # fg
+set index-active-bg             "rgba(131,165,152,1)"  # bright:blue
+set index-active-fg             "rgba(80,73,69,1)"     # bg2
 
-set notification-bg "#282828"
-set notification-fg "#b8bb26"
-set notification-error-bg "#282828"
-set notification-error-fg "#fb4934"
-set notification-warning-bg "#282828"
-set notification-warning-fg "#fb4934"
+set inputbar-bg                 "rgba(50,48,47,1)"     # bg
+set inputbar-fg                 "rgba(235,219,178,1)"  # fg
 
-set highlight-color "#fe8019"
-set highlight-active-color "#d3869b"
+set statusbar-bg                "rgba(80,73,69,1)"     # bg2
+set statusbar-fg                "rgba(235,219,178,1)"  # fg
 
-set recolor-darkcolor "#fbf1c7" 
-set recolor-lightcolor "#282828" 
+set highlight-fg                "rgba(50,48,47,1)"
+set highlight-color             "rgba(250,189,47,0.5)" # bright:yellow
+set highlight-active-color      "rgba(254,128,25,0.5)" # bright:orange
 
-set render-loading-bg "#282828"
-set render-loading-fg "#fbf1c7"
+set default-bg                  "rgba(50,48,47,1)"     # bg
+set default-fg                  "rgba(235,219,178,1)"  # fg
+set render-loading              true
+set render-loading-bg           "rgba(50,48,47,1)"     # bg
+set render-loading-fg           "rgba(235,219,178,1)"  # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "rgba(50,48,47,1)"     # bg
+set recolor-darkcolor           "rgba(235,219,178,1)"  # fg
+set recolor                     "true"
+set recolor-keephue             "true"                 # keep original color

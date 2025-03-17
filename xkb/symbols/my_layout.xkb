@@ -1,0 +1,7 @@
+xkb_keymap {
+    xkb_keycodes  { include "/usr/share/X11/xkb/keycodes/evdev" };
+    xkb_types     { include "complete" };
+    xkb_compat    { include "complete" };
+    xkb_symbols   { include "us_de_rctrl" };
+    xkb_geometry  { include "pc(pc104)" };
+};

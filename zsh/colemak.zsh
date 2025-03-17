@@ -35,7 +35,7 @@ bindkey -M vicmd "T" vi-add-eol
 bindkey -M vicmd "h" vi-repeat-search
 bindkey -M vicmd "H" vi-rev-repeat-search
 
-bindkey -s ^p "tmux-sessionizer.sh\n"
+bindkey -s ^l "tmux-sessionizer.sh\n"
 bindkey -s ^a "tmux a\n"
 
 export FZF_FULL="--height 60% --style full --preview-window=hidden"

@@ -1,12 +1,2 @@
 #!/bin/sh
 amixer -c 0 sset Headphone toggle >> /dev/null
-VOLUME=$(awk -F"[][]" '/Left:/ { print $2+0 }' <(amixer sget Master))
-if amixer -c 0 sget Headphone | grep -qw "off"
-then
-    pactl set-sink-volume @DEFAULT_SINK@ +25%
-else
-    if [ $VOLUME -ge 70 ]
-    then
-        pactl set-sink-volume @DEFAULT_SINK@ -25%
-    fi
-fi
