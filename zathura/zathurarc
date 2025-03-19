@@ -39,7 +39,8 @@ map K zoom in
 map k zoom out
 map h search forward
 map H search backward
-#map [normal] <Space>/ nohlsearch TODO: somehow doesnt work
+
+# map [normal] <Space>/ nohlsearch # somehow doesnt work
 map [normal] <C-h> nohlsearch
 
 # boomarks

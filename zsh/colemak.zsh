@@ -46,7 +46,7 @@ bindkey "^H" backward-delete-char
 bindkey "^?" backward-delete-char
 
 # Tmux
-bindkey -s ^l "tmux-sessionizer.sh\n"
+bindkey -s ^p "tmux-sessionizer.sh\n"
 bindkey -s ^a "tmux a\n"
 
 # Fzf
