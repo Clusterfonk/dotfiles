@@ -93,6 +93,12 @@ action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control|Shift"
 
+# Passthrough <C-m>
+[[keyboard.bindings]]
+key = "M"
+mods = "Control"
+chars = "\u000d"
+
 [window.padding]
 x = 10
 y = 10

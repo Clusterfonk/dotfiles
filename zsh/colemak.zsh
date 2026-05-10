@@ -24,7 +24,7 @@ bindkey -M isearch 'I' vi-forward-char
 # word/WORD navigation
 bindkey -M vicmd '^i' vi-forward-word-end
 bindkey -M vicmd 'I' vi-forward-blank-word-end
-bindkey -M vicmd '^m' vi-backward-word-end
+bindkey -M vicmd '^M' vi-backward-word-end
 bindkey -M vicmd 'M' vi-backward-blank-word-end
 
 # Menu
@@ -40,10 +40,6 @@ bindkey -M vicmd "T" vi-add-eol
 # Search
 bindkey -M vicmd "h" vi-repeat-search
 bindkey -M vicmd "H" vi-rev-repeat-search
-
-# Delete
-bindkey "^H" backward-delete-char
-bindkey "^?" backward-delete-char
 
 # Tmux
 bindkey -s ^p "tmux-sessionizer.sh\n"

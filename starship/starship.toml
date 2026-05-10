@@ -12,3 +12,8 @@ use_logical_path = false
 
 [directory.substitutions]
 
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+trim_at = '.'
+ssh_symbol = "🌐 "

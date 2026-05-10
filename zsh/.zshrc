@@ -20,9 +20,6 @@ source $XDG_CONFIG_HOME/zsh/colemak.zsh
 ## Aliases
 source $XDG_CONFIG_HOME/zsh/alias.zsh
 
-# Starship
-eval "$(starship init zsh)"
-
 # Fzf set up key bindings and fuzzy completion
 source <(fzf --zsh)
 
@@ -53,3 +50,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 export TERM=xterm-256color
 autoload -Uz colors && colors
 source $XDG_CONFIG_HOME/zsh/theme.zsh
+
+# Starship
+eval "$(starship init zsh)"
+
