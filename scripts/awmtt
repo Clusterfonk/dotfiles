@@ -91,7 +91,7 @@ start() {
 
     "$XEPHYR" :$D -name xephyr_$D -ac -br -noreset -screen "$SIZE" $XEPHYR_OPTIONS >/dev/null 2>&1 &
     sleep 1
-    DISPLAY=:$D.0 "$AWESOME" -c "$RC_FILE" $AWESOME_OPTIONS &
+    DISPLAY=:$D.0 "$AWESOME" -c "$RC_FILE" $AWESOME_OPTIONS 2>&1 | tee /tmp/awesome-awmtt.log &
     sleep 1
 
     # print some useful info
