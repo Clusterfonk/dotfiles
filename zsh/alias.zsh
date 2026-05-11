@@ -12,3 +12,6 @@ alias svim='sudoedit $1'
 alias xsc="xclip -selection clipboard"
 alias cclip="xclip -selection clipboard"
 alias pclip="xclip -selection clipboard"
+
+alias cal="khal calendar"
+alias ical="ikhal"
