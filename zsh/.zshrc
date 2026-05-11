@@ -47,7 +47,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 ## Theme
 # Colors
-export TERM=xterm-256color
+export TERM=alacritty
 autoload -Uz colors && colors
 source $XDG_CONFIG_HOME/zsh/theme.zsh
 
