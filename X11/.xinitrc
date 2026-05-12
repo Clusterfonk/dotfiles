@@ -4,4 +4,4 @@
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Start WM
-exec /usr/bin/awesome >> $XDG_CACHE_HOME/awesome/stdout 2>> $XDG_CACHE_HOME/awesome/stderr
+exec /usr/bin/awesome >> /dev/null 2>&1
